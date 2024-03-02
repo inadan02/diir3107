@@ -28,8 +28,8 @@ public class AddProductController implements Initializable, Controller {
     private Stage stage;
     private Parent scene;
     private ObservableList<Part> addParts = FXCollections.observableArrayList();
-    private String errorMessage = new String();
-    private int productId;
+    private String errorMessage ="";
+
 
     private InventoryService service;
     
@@ -84,7 +84,9 @@ public class AddProductController implements Initializable, Controller {
     @FXML
     private TableColumn<Part, Integer> deleteProductPriceCol;
 
-    public AddProductController(){}
+    public AddProductController(){
+        //do nothing
+    }
 
     public void setService(InventoryService service){
         this.service=service;
