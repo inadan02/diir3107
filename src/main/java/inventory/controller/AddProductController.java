@@ -234,8 +234,8 @@ public class AddProductController implements Initializable, Controller {
      */
     @FXML
     void handleSearchProduct(ActionEvent event) {
-        String x = productSearchTxt.getText();
-        addProductTableView.getSelectionModel().select(service.lookupPart(x));
+        String searchedProductText = productSearchTxt.getText();
+        addProductTableView.getSelectionModel().select(service.lookupPart(searchedProductText));
     }
 
 
