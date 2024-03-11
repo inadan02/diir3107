@@ -206,7 +206,8 @@ public class InventoryRepository {
 
 	public void deletePart(Part part){
 		inventory.deletePart(part);
-		for (Product product: inventory.getProducts()) {
+		for (Product product:
+				inventory.getProducts()) {
 			if(product.getAssociatedParts().contains(part)){
 				product.removeAssociatedPart(part);
 			}
