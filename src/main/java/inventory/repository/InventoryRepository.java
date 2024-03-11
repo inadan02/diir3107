@@ -2,11 +2,13 @@ package inventory.repository;
 
 
 import inventory.model.*;
+import javafx.beans.InvalidationListener;
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 
 import java.io.*;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class InventoryRepository {
 
@@ -204,6 +206,11 @@ public class InventoryRepository {
 
 	public void deletePart(Part part){
 		inventory.deletePart(part);
+		for (Product product: inventory.getProducts()) {
+			if(product.getAssociatedParts().contains(part)){
+				product.removeAssociatedPart(part);
+			}
+		}
 		writeAll();
 	}
 	public void deleteProduct(Product product){
