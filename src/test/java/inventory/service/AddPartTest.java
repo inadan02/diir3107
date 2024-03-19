@@ -48,17 +48,20 @@ class AddPartTest {
 
     @ParameterizedTest
 
-    @DisplayName("Test ECP 1/Test BVA 6")
+    @DisplayName("Test ECP 1/Test BVA 5")
 
-    @ValueSource(strings = { "parte", "obiect" })
+    @ValueSource(strings = { "parte", "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM" })
     @RepeatedTest(3)
     @Tag("ecp")
     void TC1_ECP() {
+        //arrange
         denumire="parte";
         pret=100;
         InhousePart inhousePart = new InhousePart(inventoryRepository.getAutoPartId(),denumire,pret,numar_bucati,numar_minim,numar_maxim,id_masina);
+        //act
         inventoryService.addInhousePart(denumire,pret,numar_bucati,numar_minim,numar_maxim,id_masina);
         Part parte= inventoryRepository.getAllParts().get(0);
+        //assert
         Assertions.assertEquals(inhousePart.getName(),parte.getName());
         Assertions.assertEquals(inhousePart.getPrice(),parte.getPrice());
     }
@@ -95,8 +98,8 @@ class AddPartTest {
     @Test
     @Tag("bva")
     @Timeout(5)
-    @DisplayName("Test 5 BVA")
-    void TC5_BVA() {
+    @DisplayName("Test 1 BVA")
+    void TC1_BVA() {
         denumire="";
         pret=100;
         Assertions.assertThrows(Exception.class,()->{inventoryService.addInhousePart(denumire,pret,numar_bucati,numar_minim,numar_maxim,id_masina);});
@@ -115,8 +118,8 @@ class AddPartTest {
     @Test
     @Tag("bva")
     @Timeout(5)
-    @DisplayName("Test 8 BVA")
-    void TC8_BVA() {
+    @DisplayName("Test 9 BVA")
+    void TC9_BVA() {
         denumire="M";
         pret=2;
         InhousePart inhousePart = new InhousePart(inventoryRepository.getAutoPartId(),denumire,pret,numar_bucati,numar_minim,numar_maxim,id_masina);
