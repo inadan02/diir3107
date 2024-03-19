@@ -1,0 +1,28 @@
+
+S
+java:S3655è"5Call "result.isPresent()" before accessing the value.(ÃÇûŞ8¶²ƒÃâ1
+£
+java:S1186S"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ª¯şàüÿÿÿÿ8·²ƒÃâ1
+v
+java:S1450"YRemove the "modifyPart" field and declare it as a local variable in the relevant methods.(Ê‡×ß8¸²ƒÃâ1
+~
+java:S1450"\Remove the "modifyProduct" field and declare it as a local variable in the relevant methods.(ø½é‚ùÿÿÿÿ8¹²ƒÃâ1
+q
+java:S1450"TRemove the "scene" field and declare it as a local variable in the relevant methods.(‹ôÒ¡8¹²ƒÃâ1
+v
+java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ğÑœıÿÿÿÿ8¹²ƒÃâ1
+X	java:S125w"<This block of commented-out lines of code should be removed.( ÆüÖ8Æ²ƒÃâ1
+M	java:S106"+Replace this use of System.out by a logger.(ò¤áÿûÿÿÿÿ8Ù²ƒÃâ1
+M	java:S106’"+Replace this use of System.out by a logger.(½ğöÈıÿÿÿÿ8Ù²ƒÃâ1
+M	java:S106§"+Replace this use of System.out by a logger.(¤¡ñÄÿÿÿÿÿ8İ²ƒÃâ1
+H	java:S106©"+Replace this use of System.out by a logger.(¢¬õ÷8Ş²ƒÃâ1
+T
+java:S2696É"6Make the enclosing method "static" or remove this set.(ËØ”¦8á²ƒÃâ1
+T
+java:S2696Ê"6Make the enclosing method "static" or remove this set.(„¿¬‰8á²ƒÃâ1
+Y
+java:S2696Ö"6Make the enclosing method "static" or remove this set.(„“”ôÿÿÿÿÿ8ã²ƒÃâ1
+T
+java:S2696×"6Make the enclosing method "static" or remove this set.(ŒÑ³ã8ã²ƒÃâ1
+M	java:S106é"+Replace this use of System.out by a logger.(´ä”×úÿÿÿÿ8ç²ƒÃâ1
+H	java:S106ì"+Replace this use of System.out by a logger.(¤Õï«8ç²ƒÃâ1

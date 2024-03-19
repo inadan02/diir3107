@@ -12,7 +12,7 @@ import java.util.*;
 
 public class InventoryRepository {
 
-	private static String filename = "data/items.txt";
+	private static String filename = "C:\\Users\\Ina\\diir3107\\src\\main\\resources\\data\\items.txt";
 	private Inventory inventory;
 	public InventoryRepository(){
 		this.inventory=new Inventory();

@@ -1,0 +1,20 @@
+
+S
+java:S3655Ğ"5Call "result.isPresent()" before accessing the value.(ÃÇûŞ8¸³ƒÃâ1
+
+java:S1186}"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦Ê—8º³ƒÃâ1
+£
+java:S1186Z"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(§úîúıÿÿÿÿ8º³ƒÃâ1
+x
+java:S1450!"[Remove the "errorMessage" field and declare it as a local variable in the relevant methods.(ÊÃ‘æ8»³ƒÃâ1
+q
+java:S1450"TRemove the "scene" field and declare it as a local variable in the relevant methods.(‹ôÒ¡8»³ƒÃâ1
+v
+java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ğÑœıÿÿÿÿ8»³ƒÃâ1
+=
+java:S2129!" Remove this "String" constructor(ÊÃ‘æ8À³ƒÃâ1
+M	java:S106¯"+Replace this use of System.out by a logger.(ò¤áÿûÿÿÿÿ8Ø³ƒÃâ1
+M	java:S106²"+Replace this use of System.out by a logger.(½ğöÈıÿÿÿÿ8Ø³ƒÃâ1
+M	java:S106Ñ"+Replace this use of System.out by a logger.(„Åé£úÿÿÿÿ8Û³ƒÃâ1
+H	java:S106Ô"+Replace this use of System.out by a logger.(¤Õï«8Ü³ƒÃâ1
+M	java:S106ô"+Replace this use of System.out by a logger.(Éâ…ºıÿÿÿÿ8à³ƒÃâ1

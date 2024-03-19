@@ -1,0 +1,16 @@
+
+R
+java:S3655m"5Call "result.isPresent()" before accessing the value.(ÃÇûÞ8“‰›Äâ1
+
+java:S1186>"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¥×¹<8”‰›Äâ1
+x
+java:S1450"[Remove the "errorMessage" field and declare it as a local variable in the relevant methods.(®Ãê8•‰›Äâ1
+q
+java:S1450"TRemove the "scene" field and declare it as a local variable in the relevant methods.(‹ôÒ¡8•‰›Äâ1
+v
+java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ðÑœýÿÿÿÿ8•‰›Äâ1
+X	java:S125W"<This block of commented-out lines of code should be removed.( ÆüÖ8œ‰›Äâ1
+J
+java:S1125¤"'Remove the unnecessary boolean literal.(ÿÂóéüÿÿÿÿ8¤‰›Äâ1
+L
+java:S1068"*Remove this unused "partId" private field.(•›™âýÿÿÿÿ8¥‰›Äâ1

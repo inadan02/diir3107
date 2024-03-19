@@ -7,14 +7,35 @@ import javafx.collections.ObservableList;
 public class InventoryService {
 
     private InventoryRepository repo;
+
     public InventoryService(InventoryRepository repo){
         this.repo =repo;
     }
 
+
     public void addInhousePart(String name, double price, int inStock, int min, int  max, int partDynamicValue){
+        if (price < 0)
+            throw new NumberFormatException("Price cannot be negative");
+        int check=0;
+        try
+        {
+            int s=Integer.parseInt(name);
+            check=1;
+        }
+        catch(Exception e){
+
+        }
+        if (check==1)
+            throw new java.lang.NumberFormatException();
+        if(name=="")
+            throw new java.lang.RuntimeException();
+        if(price==0){
+            throw new java.lang.RuntimeException();
+        }
         InhousePart inhousePart = new InhousePart(repo.getAutoPartId(), name, price, inStock, min, max, partDynamicValue);
         repo.addPart(inhousePart);
     }
+
     public void addOutsourcePart(String name, double price, int inStock, int min, int  max, String partDynamicValue){
         OutsourcedPart outsourcedPart = new OutsourcedPart(repo.getAutoPartId(), name, price, inStock, min, max, partDynamicValue);
         repo.addPart(outsourcedPart);
@@ -41,9 +62,10 @@ public class InventoryService {
         return repo.lookupProduct(search);
     }
 
-    public void updateInhousePart(int partIndex, int partId, String name, double price, int inStock, int min, int max, int partDynamicValue){
+    public Part updateInhousePart(int partIndex, int partId, String name, double price, int inStock, int min, int max, int partDynamicValue){
         InhousePart inhousePart = new InhousePart(partId, name, price, inStock, min, max, partDynamicValue);
         repo.updatePart(partIndex, inhousePart);
+        return inhousePart;
     }
 
     public void updateOutsourcedPart(int partIndex, int partId, String name, double price, int inStock, int min, int max, String partDynamicValue){

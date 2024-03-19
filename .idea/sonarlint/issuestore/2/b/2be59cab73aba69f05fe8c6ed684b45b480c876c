@@ -1,0 +1,27 @@
+
+S
+java:S3655¢"5Call "result.isPresent()" before accessing the value.(ÃÇûŞ8£¯ƒÃâ1
+
+java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦Ê—8³¯ƒÃâ1
+£
+java:S1186D"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÌÎ”•ûÿÿÿÿ8µ¯ƒÃâ1
+x
+java:S1450 "[Remove the "errorMessage" field and declare it as a local variable in the relevant methods.(ÊÃ‘æ8¸¯ƒÃâ1
+w
+java:S1450""URemove the "partId" field and declare it as a local variable in the relevant methods.(•›™âıÿÿÿÿ8¹¯ƒÃâ1
+q
+java:S1450"TRemove the "scene" field and declare it as a local variable in the relevant methods.(‹ôÒ¡8¹¯ƒÃâ1
+v
+java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ğÑœıÿÿÿÿ8¹¯ƒÃâ1
+=
+java:S2129 " Remove this "String" constructor(ÊÃ‘æ8È¯ƒÃâ1
+X	java:S125v"<This block of commented-out lines of code should be removed.( ÆüÖ8õ¯ƒÃâ1
+H	java:S106£"+Replace this use of System.out by a logger.(§ª¬8°ƒÃâ1
+M	java:S106¦"+Replace this use of System.out by a logger.(ùÿèÁøÿÿÿÿ8°ƒÃâ1
+]
+java:S1117²":Rename "partId" which hides the field declared at line 34.(ÂçšÇúÿÿÿÿ8“°ƒÃâ1
+J
+java:S1125Ä"'Remove the unnecessary boolean literal.(ÿÂóéüÿÿÿÿ8™°ƒÃâ1
+M	java:S106Í"+Replace this use of System.out by a logger.(Ï³Ìùÿÿÿÿ8°ƒÃâ1
+L
+java:S1068""*Remove this unused "partId" private field.(•›™âıÿÿÿÿ8Ÿ°ƒÃâ1
