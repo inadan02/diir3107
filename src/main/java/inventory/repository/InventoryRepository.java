@@ -2,9 +2,7 @@ package inventory.repository;
 
 
 import inventory.model.*;
-import javafx.beans.InvalidationListener;
 import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 
 import java.io.*;
@@ -13,9 +11,9 @@ import java.util.*;
 public class InventoryRepository {
 
 	private static String filename = "C:\\Users\\Ina\\diir3107\\src\\main\\resources\\data\\items.txt";
-	private Inventory inventory;
+	private InventoryRepositoryMemory inventory;
 	public InventoryRepository(){
-		this.inventory=new Inventory();
+		this.inventory=new InventoryRepositoryMemory();
 		readParts();
 		readProducts();
 	}
@@ -219,11 +217,11 @@ public class InventoryRepository {
 		writeAll();
 	}
 
-	public Inventory getInventory(){
+	public InventoryRepositoryMemory getInventory(){
 		return inventory;
 	}
 
-	public void setInventory(Inventory inventory){
+	public void setInventory(InventoryRepositoryMemory inventory){
 		this.inventory=inventory;
 	}
 }
