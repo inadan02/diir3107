@@ -1,6 +1,5 @@
 package inventory.model;
 
-
 public class InhousePart extends Part {
 
     // Declare fields

@@ -1,5 +1,2 @@
 
-z
-java:S14882"_Immediately return this expression instead of assigning it to the temporary variable "product".(¨þÛ¿ùÿÿÿÿ
-B
-java:S11251"'Remove the unnecessary boolean literal.(ÐÏŸžþÿÿÿÿ
+E	java:S1062"+Replace this use of System.out by a logger.(úõ–áùÿÿÿÿ

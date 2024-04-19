@@ -1,13 +1,4 @@
 
-g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(œÇÖŸÿÿÿÿÿ8ºÿå1
-g	java:S112!"FDefine and throw a dedicated exception instead of using a generic one.(œÇÖŸÿÿÿÿÿ8œÃå1
-Y
-java:S4973"<Strings and Boxed types should be compared using "equals()".(…‰¸ 8‚ºÿå1
-]	java:S107A"<Method has 8 parameters, which is greater than 7 authorized.(„äÆÛúÿÿÿÿ8ˆºÿå1
-W	java:S107G"<Method has 8 parameters, which is greater than 7 authorized.(çÄû"8‰ºÿå1
-X	java:S107L"<Method has 8 parameters, which is greater than 7 authorized.(¥Á¥±8‰ºÿå1
-R
-java:S1854"5Remove this useless assignment to local variable "s".(Êˆø‹8‰ºÿå1
-C
-java:S1481"&Remove this unused "s" local variable.(Êˆø‹8Šºÿå1
-J	java:S108")Either remove or fill this block of code.(ñ“Š±üÿÿÿÿ8Šºÿå1
+W	java:S107-"<Method has 8 parameters, which is greater than 7 authorized.(²ÅÓ78æø‚¼î1
+W	java:S1072"<Method has 8 parameters, which is greater than 7 authorized.(çÄû"8‰ºÿå1
+X	java:S1077"<Method has 8 parameters, which is greater than 7 authorized.(¥Á¥±8‰ºÿå1

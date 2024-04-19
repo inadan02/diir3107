@@ -6,14 +6,21 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.*;
-import java.util.*;
+import java.util.StringTokenizer;
 
 public class InventoryRepository {
 
-	private static String filename = "C:\\Users\\Ina\\diir3107\\src\\main\\resources\\data\\items.txt";
-	private InventoryRepositoryMemory inventory;
+	private static String filename = "data/items.txt";
+	private Inventory inventory;
+
 	public InventoryRepository(){
-		this.inventory=new InventoryRepositoryMemory();
+		this.inventory=new Inventory();
+		readParts();
+		readProducts();
+	}
+
+	public InventoryRepository(Inventory inventory){
+		this.inventory=inventory;
 		readParts();
 		readProducts();
 	}
@@ -159,8 +166,10 @@ public class InventoryRepository {
 	}
 
 	public void addPart(Part part){
-		inventory.addPart(part);
-		writeAll();
+		if (isValidPart(part).equals("")) {
+			inventory.addPart(part);
+			writeAll();
+		}
 	}
 
 	public void addProduct(Product product){
@@ -204,12 +213,6 @@ public class InventoryRepository {
 
 	public void deletePart(Part part){
 		inventory.deletePart(part);
-		for (Product product:
-				inventory.getProducts()) {
-			if(product.getAssociatedParts().contains(part)){
-				product.removeAssociatedPart(part);
-			}
-		}
 		writeAll();
 	}
 	public void deleteProduct(Product product){
@@ -217,11 +220,37 @@ public class InventoryRepository {
 		writeAll();
 	}
 
-	public InventoryRepositoryMemory getInventory(){
+	public Inventory getInventory(){
 		return inventory;
 	}
 
-	public void setInventory(InventoryRepositoryMemory inventory){
+	public void setInventory(Inventory inventory){
 		this.inventory=inventory;
+	}
+
+	public static String isValidPart(Part part) {
+		String errorMessage = "";
+		if (part.getPartId() < 0) {
+			errorMessage += "ID must be greater or equal with 0. ";
+		}
+		if(part.getName().equals("")) {
+			errorMessage += "A name has not been entered. ";
+		}
+		if(part.getPrice() < 0.01) {
+			errorMessage += "The price must be greater than 0. ";
+		}
+		if(part.getInStock() < 1) {
+			errorMessage += "Inventory level must be greater than 0. ";
+		}
+		if(part.getMin() > part.getMax()) {
+			errorMessage += "The Min value must be less than the Max value. ";
+		}
+		if(part.getInStock() < part.getMin()) {
+			errorMessage += "Inventory level is lower than minimum value. ";
+		}
+		if(part.getInStock() > part.getMax()) {
+			errorMessage += "Inventory level is higher than the maximum value. ";
+		}
+		return errorMessage;
 	}
 }

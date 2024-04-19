@@ -7,28 +7,36 @@
   <groupId>inventory</groupId>
   <artifactId>Inventory</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+  </properties>
 
   <name>Inventory</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <junit-plaform.version>5.6.0</junit-plaform.version>
-  </properties>
-
   <dependencies>
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.6.0</version>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>5.0.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>org.junit.vintage</groupId>
+      <artifactId>junit-vintage-engine</artifactId>
+      <version>5.7.0</version>
+    </dependency>
+    <!--    <dependency>-->
+    <!--      <groupId>org.mockito</groupId>-->
+    <!--      <artifactId>mockito-junit-jupiter</artifactId>-->
+    <!--      <version>5.0.0</version>-->
+    <!--      <scope>test</scope>-->
+    <!--    </dependency>-->
+    <dependency>
       <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
+      <artifactId>junit-jupiter-engine</artifactId>
       <version>5.6.0</version>
       <scope>test</scope>
     </dependency>
@@ -38,18 +46,7 @@
       <version>5.6.0</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
-      <version>2.23.0</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-junit-jupiter</artifactId>
-      <version>2.23.0</version>
-      <scope>test</scope>
-    </dependency>
+
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-base</artifactId>
@@ -95,27 +92,23 @@
       <artifactId>controlsfx</artifactId>
       <version>11.0.1</version>
     </dependency>
+
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <version>5.6.0</version>
-      <scope>compile</scope>
+      <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
-      <version>2.23.0</version>
-      <scope>compile</scope>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>RELEASE</version>
+      <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-params</artifactId>
-      <version>5.6.0</version>
-      <scope>compile</scope>
-    </dependency>
-  </dependencies>
 
+  </dependencies>
   <build>
+    <!--<pluginManagement>--><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
     <plugins>
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
@@ -132,7 +125,8 @@
       </plugin>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.22.1</version>
+        <!--        <version>2.22.1</version>-->
+        <version>3.0.0</version>
         <configuration>
           <!--                <failIfNoTests>false</failIfNoTests>-->
         </configuration>
@@ -167,7 +161,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
-        <version>1.6.0</version>
+        <version>1.2.1</version>
         <executions>
           <execution>
             <goals>
@@ -176,10 +170,13 @@
           </execution>
         </executions>
         <configuration>
-          <mainClass>inventory.Main</mainClass>
+          <mainClass>tasks.view.Main</mainClass>
         </configuration>
       </plugin>
+
     </plugins>
+    <!--</pluginManagement>-->
+
   </build>
 
   <pluginRepositories>

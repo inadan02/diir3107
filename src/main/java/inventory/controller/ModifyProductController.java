@@ -87,8 +87,6 @@ public class ModifyProductController implements Initializable, Controller {
     @FXML
     private TableColumn<Part, Double> deleteProductPriceCol;
 
-    public ModifyProductController(){}
-
     public void setService(InventoryService service){
         this.service=service;
         fillWithData();
@@ -137,6 +135,7 @@ public class ModifyProductController implements Initializable, Controller {
     private void displayScene(ActionEvent event, String source) throws IOException {
         stage = (Stage)((Button)event.getSource()).getScene().getWindow();
         FXMLLoader loader= new FXMLLoader(getClass().getResource(source));
+        //scene = FXMLLoader.load(getClass().getResource(source));
         scene = loader.load();
         Controller ctrl=loader.getController();
         ctrl.setService(service);

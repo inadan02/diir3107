@@ -13,7 +13,7 @@ public abstract class Part {
     private int max;
     
     // Constructor
-    protected Part(int partId, String name, double price, int inStock, int min, int max) {
+    public Part(int partId, String name, double price, int inStock, int min, int max) {
         this.partId = partId;
         this.name = name;
         this.price = price;
@@ -86,9 +86,6 @@ public abstract class Part {
     public static String isValidPart(String name, double price, int inStock, int min, int max, String errorMessage) {
         if(name.equals("")) {
             errorMessage += "A name has not been entered. ";
-        }
-        if (min < 0) {
-            errorMessage += "The inventory level must be greater than 0. " ;
         }
         if(price < 0.01) {
             errorMessage += "The price must be greater than 0. ";

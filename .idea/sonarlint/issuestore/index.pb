@@ -1,8 +1,6 @@
 
 Q
 !src/main/java/inventory/Main.java,e\c\ece56c845d15f2c366abf3aa1a07420ba35ea01b
-\
-,src/main/java/inventory/model/Inventory.java,6\f\6f314193286495a02fb473e4cf32b85ed85f7dcf
 l
 <src/main/java/inventory/controller/MainScreenController.java,f\e\fe123040025ffc7790be0315cb187fb9b2631761
 e
@@ -39,12 +37,6 @@ T
 $src/main/resources/fxml/AddPart.fxml,7\4\74277aa7f6a7da5d47d283ae91e14acdc3d7a7a5
 W
 'src/main/resources/fxml/MainScreen.fxml,f\5\f5a3af02580fd33ac7146ea2cf15c0b80a9efc25
-i
-9src/test/java/inventory/service/InventoryServiceTest.java,3\4\34ac316ed4f792bc79db6eea4325c9bc6d64247e
-`
-0src/main/java/inventory/service/AddPartTest.java,c\c\ccc3848cfb9bf5df7f699706d9892dbdc5b9aa30
-`
-0src/test/java/inventory/service/AddPartTest.java,b\8\b8c19f3a1e92e75d1c367d7f61e7991e360b68a5
 
 Q.idea/sonarlint/securityhotspotstore/b/1/b1f9f60d378ed17b8cfbd23f6880c72f0d6cb447,c\9\c96e9b85daeb05822cf567aa0e98850574e8e8aa
 
@@ -100,8 +92,6 @@ Q.idea/sonarlint/securityhotspotstore/6/0/60c45c8b83590f796b548300881eb5e3203440
 
 Q.idea/sonarlint/securityhotspotstore/d/f/df0af9f23528c297ca223e6f68423787a591d8d7,1\f\1f6535f093b6a9b8b795740bf09ecfdc9d938081
 
-Q.idea/sonarlint/securityhotspotstore/6/f/6f314193286495a02fb473e4cf32b85ed85f7dcf,8\a\8a078db946b01c1ceb6438f9a22c1a19fd1f34b5
-
 Q.idea/sonarlint/securityhotspotstore/e/c/ece56c845d15f2c366abf3aa1a07420ba35ea01b,6\3\63ddd089df589abf9c5a034ec836699826ba52bd
 w
 G.idea/sonarlint/issuestore/a/6/a6635e298a8cf86a761fdee9b7ec350061490945,a\6\a6d98050b0bb4d19e34e8a05e52c3ca36ba9fdf8
@@ -109,3 +99,17 @@ G.idea/sonarlint/issuestore/a/6/a6635e298a8cf86a761fdee9b7ec350061490945,a\6\a6
 Q.idea/sonarlint/securityhotspotstore/9/c/9cd8fd867bf6d05ab23fd072c876cc5fe298b358,2\5\256a1c98a980a1a4741b3b9bb7183d0fb1456c70
 9
 	items.txt,8\4\849993f64dd5a5ffe0f4471e1dd84f1abca2c282
+`
+0src/test/java/inventory/model/InventoryTest.java,1\7\1727e72bacda923720f502e981a8b45612dcd055
+\
+,src/main/java/inventory/model/Inventory.java,6\f\6f314193286495a02fb473e4cf32b85ed85f7dcf
+s
+Csrc/test/java/inventory/repository/InventoryRepositoryLab4Test.java,2\2\22003ad5409e937fa0a5e4ada753b5c4eb6092d9
+m
+=src/test/java/inventory/service/InventoryServiceLab4Test.java,3\3\33d614d8ae7437d330669e804e82fb855e43a42d
+x
+Hsrc/test/java/inventory/service/InventoryServiceLab4IntegrationTest.java,4\e\4ed3e5bfe774f11e282b9721e1bf392caee59423
+~
+Nsrc/test/java/inventory/repository/InventoryRepositoryLab4IntegrationTest.java,3\1\315385e475f3fc302a2a0272df3ffa557906890b
+d
+4src/test/java/inventory/model/InventoryLab4Test.java,4\d\4d64310352d59b0f318021de5037694a3eac90b1

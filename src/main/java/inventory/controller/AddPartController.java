@@ -11,7 +11,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URL;
@@ -24,22 +23,14 @@ public class AddPartController implements Initializable, Controller {
     private Stage stage;
     private Parent scene;
     private boolean isOutsourced = true;
-    private String errorMessage = "";
-    private int partId;
-
+    private String errorMessage = new String();
     private InventoryService service;
-    
-    @FXML
-    private RadioButton inhouseRBtn;
 
     @FXML
     private RadioButton outsourcedRBtn;
     
     @FXML
     private Label addPartDynamicLbl;
-
-    @FXML
-    private TextField partIdTxt;
 
     @FXML
     private TextField nameTxt;
@@ -58,8 +49,6 @@ public class AddPartController implements Initializable, Controller {
 
     @FXML
     private TextField minTxt;
-
-    public AddPartController(){}
 
     @Override
     public void setService(InventoryService service){
@@ -107,10 +96,10 @@ public class AddPartController implements Initializable, Controller {
         alert.setContentText("Are you sure you want to cancel adding part?");
         Optional<ButtonType> result = alert.showAndWait();
         if(result.get() == ButtonType.OK) {
-            Logger.getLogger("Ok selected. Part addition canceled.");
+            System.out.println("Ok selected. Part addition canceled.");
             displayScene(event, "/fxml/MainScreen.fxml");
         } else {
-            Logger.getLogger("Cancel clicked.");
+            System.out.println("Cancel clicked.");
         }
     }
 
@@ -170,7 +159,7 @@ public class AddPartController implements Initializable, Controller {
             }
             
         } catch (NumberFormatException e) {
-            Logger.getLogger("Form contains blank field.");
+            System.out.println("Form contains blank field.");
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Error Adding Part!");
             alert.setHeaderText("Error!");
@@ -180,3 +169,4 @@ public class AddPartController implements Initializable, Controller {
     }
 
 }
+

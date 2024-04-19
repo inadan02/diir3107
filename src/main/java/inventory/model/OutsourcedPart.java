@@ -2,7 +2,6 @@
 package inventory.model;
 
 
-
 public class OutsourcedPart extends Part {
     
     // Declare fields
