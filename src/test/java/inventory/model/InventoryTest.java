@@ -14,7 +14,7 @@ public class InventoryTest {
     private Part part;
     private InventoryRepository repo = new InventoryRepository();;
 
-    @Order(1)
+    @Order(2)
     @RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
     @DisplayName("RepeatingTest")
     @Tag("TC1_ECP")
@@ -26,9 +26,9 @@ public class InventoryTest {
     }
 
     @Test
-    @Order(2)
-    @Tag("TC3_ECP")
-    void TC3_ECP() {
+    @Order(1)
+    @Tag("TC2_ECP")
+    void TC2_ECP() {
         part = new InhousePart(3, "", 2020, 5, 3,9, 1);
         int initialSize = repo.getAllParts().size();
         repo.addPart(part);
@@ -38,7 +38,7 @@ public class InventoryTest {
     }
 
     @Test
-    @Order(3)
+    @Order(5)
     @Tag("TC4_ECP")
     //@Disabled
     void TC6_ECP() {
@@ -50,7 +50,7 @@ public class InventoryTest {
         assert InventoryRepository.isValidPart(part).equals("Inventory level is higher than the maximum value. ");
     }
 
-    @Order(4)
+    @Order(8)
     @Tag("TC8_ECP")
     @ParameterizedTest
     @ValueSource(strings = { "part7" })
@@ -63,12 +63,12 @@ public class InventoryTest {
         assert InventoryRepository.isValidPart(part).equals("Inventory level must be greater than 0. Inventory level is lower than minimum value. ");
     }
 
-    @Order(5)
+    @Order(3)
     @RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
     @DisplayName("RepeatingTest")
     @Tag("TC3_BVA")
     void TC3_BVA() {
-        part = new InhousePart(1, "P", 2010, 3, 2,5, 1);
+        part = new InhousePart(1, "part1", 20, 3, 1,10, 1);
         int initialSize = repo.getAllParts().size();
         repo.addPart(part);
         assert repo.getAllParts().size() == initialSize + 1;
@@ -96,8 +96,8 @@ public class InventoryTest {
         assert InventoryRepository.isValidPart(part).equals("A name has not been entered. ");
     }
 
-    @Order(8)
-    @Tag("TC21_BVA")
+    @Order(4)
+    @Tag("TC4_BVA")
     @ParameterizedTest
     @ValueSource(strings = { "part" })
     void TC21_BVA(String partName) {
