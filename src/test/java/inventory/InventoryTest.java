@@ -10,10 +10,7 @@ public class InventoryTest {
     private Part part;
     private InventoryRepository repo = new InventoryRepository();;
 
-    @Order(2)
-    @RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
-    @DisplayName("RepeatingTest")
-    @Tag("TC1_ECP")
+    @Test
     void TC1_ECP() {
         part = new InhousePart(1, "part1", 20, 3, 1,10, 1);
         int initialSize = repo.getAllParts().size();
@@ -22,8 +19,6 @@ public class InventoryTest {
     }
 
     @Test
-    @Order(1)
-    @Tag("TC2_ECP")
     void TC2_ECP() {
         part = new InhousePart(3, "", 2020, 5, 3,9, 1);
         int initialSize = repo.getAllParts().size();
@@ -59,10 +54,7 @@ public class InventoryTest {
         assert InventoryRepository.isValidPart(part).equals("Inventory level must be greater than 0. Inventory level is lower than minimum value. ");
     }
 
-    @Order(3)
-    @RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
-    @DisplayName("RepeatingTest")
-    @Tag("TC3_BVA")
+    @Test
     void TC3_BVA() {
         part = new InhousePart(1, "part1", 20, 3, 1,10, 1);
         int initialSize = repo.getAllParts().size();
@@ -92,12 +84,9 @@ public class InventoryTest {
         assert InventoryRepository.isValidPart(part).equals("A name has not been entered. ");
     }
 
-    @Order(4)
-    @Tag("TC4_BVA")
-    @ParameterizedTest
-    @ValueSource(strings = { "part" })
-    void TC4_BVA(String partName) {
-        part = new InhousePart(1, partName, 123, -1, 3,5, 1);
+    @Test
+    void TC4_BVA() {
+        part = new InhousePart(1, "part", 123, -1, 3,5, 1);
         int initialSize = repo.getAllParts().size();
         repo.addPart(part);
         assert repo.getAllParts().size() == initialSize;
