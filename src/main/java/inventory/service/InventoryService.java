@@ -1,7 +1,7 @@
 package inventory.service;
 
 import inventory.model.*;
-import inventory.repository.InventoryRepository;
+import inventory.InventoryRepository;
 import javafx.collections.ObservableList;
 
 public class InventoryService {

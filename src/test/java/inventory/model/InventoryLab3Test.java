@@ -1,6 +1,6 @@
 package inventory.model;
 
-import inventory.repository.InventoryRepository;
+import inventory.InventoryRepository;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.junit.jupiter.api.BeforeAll;

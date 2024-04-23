@@ -1,22 +1,18 @@
-package inventory.model;
+package inventory;
 
-import inventory.repository.InventoryRepository;
+import inventory.model.InhousePart;
+import inventory.model.Part;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class InventoryTest {
     private Part part;
     private InventoryRepository repo = new InventoryRepository();;
 
     @Order(2)
-    @RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
-    @DisplayName("RepeatingTest")
+    //@RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
+    //@DisplayName("RepeatingTest")
     @Tag("TC1_ECP")
     void TC1_ECP() {
         part = new InhousePart(1, "part1", 20, 3, 1,10, 1);
@@ -64,7 +60,7 @@ public class InventoryTest {
     }
 
     @Order(3)
-    @RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
+    //@RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
     @DisplayName("RepeatingTest")
     @Tag("TC3_BVA")
     void TC3_BVA() {

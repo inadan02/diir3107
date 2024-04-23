@@ -1,4 +1,4 @@
-package inventory.repository;
+package inventory;
 
 
 import inventory.model.*;

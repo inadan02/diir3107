@@ -1,6 +1,5 @@
 package inventory;
 
-import inventory.repository.InventoryRepository;
 import inventory.service.InventoryService;
 import inventory.controller.MainScreenController;
 import javafx.application.Application;
