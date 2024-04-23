@@ -1,6 +1,10 @@
-package inventory.model;
+package inventory;
 
 import inventory.InventoryRepository;
+import inventory.model.InhousePart;
+import inventory.model.Inventory;
+import inventory.model.Part;
+import inventory.model.Product;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.junit.jupiter.api.BeforeAll;
@@ -27,7 +31,7 @@ public class InventoryLab3Test {
     }
 
     @Test
-    void F02_TC02() {
+    void TC02() {
         Part part1 = new InhousePart(1, "part1", 20, 3, 1,10, 1);
         Part part2 = new InhousePart(2, "part2", 20, 3, 1,10, 1);
         Part part3 = new InhousePart(3, "part3", 20, 3, 1,10, 1);
@@ -47,7 +51,7 @@ public class InventoryLab3Test {
     }
 
     @Test
-    void F02_TC03() {
+    void TC03() {
 
         assert inventory.lookupProduct("Produs_3")==null;
 
