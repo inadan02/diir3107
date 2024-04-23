@@ -3,7 +3,7 @@ package inventory.service;
 import inventory.model.InhousePart;
 import inventory.model.Part;
 import inventory.model.Product;
-import inventory.repository.InventoryRepository;
+import inventory.InventoryRepository;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.junit.jupiter.api.BeforeEach;

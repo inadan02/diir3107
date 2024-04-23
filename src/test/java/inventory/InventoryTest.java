@@ -11,8 +11,8 @@ public class InventoryTest {
     private InventoryRepository repo = new InventoryRepository();;
 
     @Order(2)
-    //@RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
-    //@DisplayName("RepeatingTest")
+    @RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
+    @DisplayName("RepeatingTest")
     @Tag("TC1_ECP")
     void TC1_ECP() {
         part = new InhousePart(1, "part1", 20, 3, 1,10, 1);
@@ -60,7 +60,7 @@ public class InventoryTest {
     }
 
     @Order(3)
-    //@RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
+    @RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
     @DisplayName("RepeatingTest")
     @Tag("TC3_BVA")
     void TC3_BVA() {
@@ -96,7 +96,7 @@ public class InventoryTest {
     @Tag("TC4_BVA")
     @ParameterizedTest
     @ValueSource(strings = { "part" })
-    void TC21_BVA(String partName) {
+    void TC4_BVA(String partName) {
         part = new InhousePart(1, partName, 123, -1, 3,5, 1);
         int initialSize = repo.getAllParts().size();
         repo.addPart(part);

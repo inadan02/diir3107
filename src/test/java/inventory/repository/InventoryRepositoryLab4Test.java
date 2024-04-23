@@ -1,5 +1,6 @@
 package inventory.repository;
 
+import inventory.InventoryRepository;
 import inventory.model.InhousePart;
 import inventory.model.Part;
 import inventory.model.Product;
