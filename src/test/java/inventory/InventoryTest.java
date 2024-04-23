@@ -29,8 +29,6 @@ public class InventoryTest {
     }
 
     @Test
-    @Order(5)
-    @Tag("TC4_ECP")
     //@Disabled
     void TC6_ECP() {
         part = new InhousePart(5, "part5", 205, 15, 3,10, 1);
@@ -41,12 +39,9 @@ public class InventoryTest {
         assert InventoryRepository.isValidPart(part).equals("Inventory level is higher than the maximum value. ");
     }
 
-    @Order(8)
-    @Tag("TC8_ECP")
-    @ParameterizedTest
-    @ValueSource(strings = { "part7" })
-    void TC8_ECP(String partName) {
-        part = new InhousePart(7, partName, 12345, 0, 3,5, 1);
+    @Test
+    void TC8_ECP() {
+        part = new InhousePart(7, "part7", 12345, 0, 3,5, 1);
         int initialSize = repo.getAllParts().size();
         repo.addPart(part);
         assert repo.getAllParts().size() == initialSize;
@@ -63,8 +58,6 @@ public class InventoryTest {
     }
 
     @Test
-    @Order(6)
-    @Tag("TC22_BVA")
     void TC22_BVA() {
         part = new InhousePart(1, "part", 123, 1, 1,5, 1);
         int initialSize = repo.getAllParts().size();
@@ -73,8 +66,6 @@ public class InventoryTest {
     }
 
     @Test
-    @Order(7)
-    @Tag("TC1_BVA")
     void TC1_BVA() {
         part = new InhousePart(1, "", 123, 3, 2,5, 1);
         int initialSize = repo.getAllParts().size();
